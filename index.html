@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html ng-app="llamaApp">
+	<head>
+		<title>Zappos Challange :: Majestic Llama</title>
+		<link rel="shortcut icon" href="images/favicon.png" />
+
+		<meta name="zappos challange" content="">
+		<meta name="llama facts" content="">
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<script src="https://use.fontawesome.com/7091cf5655.js"></script>
+
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		<script src="includes/js/angular.min.js"></script>
+		<script src="includes/js/angular-route.js"></script>
+		<script src="includes/js/script.js"></script>
+
+	</head>
+	<body ng-controller="mainController">
+		<!--Section 1 - Navigation bar - Starts -->
+		<div id="llamaMain" class="container">
+			<div class="navbar navbar-fixed-top">
+				<div class="container">
+					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><img src="images/logo.png" alt="llama"></a>
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#" class="glyphicon glyphicon-home"><strong> Home</strong></a></li>
+							<li><a href="#about" class="glyphicon glyphicon-user"><strong> About Me</strong></a></li>
+							<li><a href="#types" class="glyphicon glyphicon-tags"><strong> Types of Llama</strong></a></li>
+							<li><a href="#facts" class="glyphicon glyphicon-film"><strong> Llama Facts</strong></a></li>
+							<li><a href="#contact" class="glyphicon glyphicon-phone"><strong> Contact Us</strong></a></li>
+						</ul>
+						<form class="navbar-form pull-right">
+							<input type="text" class="form-control" placeholder="Search [Not Functional]" id="search">
+							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey"></span></button>
+						</form><!-- close navigation bar search -->
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><strong> My Account </strong><strong class="caret"></strong></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-off"></span> Sign out</a>
+									</li>
+								</ul>
+							</li>
+						</ul><!-- close nav pull-right -->
+					</div><!-- close nav-collapse -->
+				</div><!-- close container -->
+			</div><!-- close navbar -->
+			<!--Section 1 - Navigation bar - Ends -->
+
+			<!--Section 2 - Carousel/slideshow - Starts -->
+			<div id="llamaCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#llamaCarousel"></li>
+					<li data-slide-to="1" data-target="#llamaCarousel"></li>
+					<li data-slide-to="2" data-target="#llamaCarousel"></li>
+					<li data-slide-to="3" data-target="#llamaCarousel"></li>
+					<li data-slide-to="4" data-target="#llamaCarousel"></li>
+					<li data-slide-to="5" data-target="#llamaCarousel"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div id="slider1" class="item active">
+						<div class="carousel-caption">
+							<h4>Brown Llama</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 1-->
+					<div id="slider2" class="item">
+						<div class="carousel-caption">
+							<h4>Laying down Llama</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 2-->
+					<div id="slider3" class="item">
+						<div class="carousel-caption">
+							<h4>Llama from the ancient Inca site of Machu Picchu, Peru</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 3-->
+					<div id="slider4" class="item">
+						<div class="carousel-caption">
+							<h4>Classic Llama</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 1-->
+					<div id="slider5" class="item">
+						<div class="carousel-caption">
+							<h4>Baby Llama</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 1-->
+					<div id="slider6" class="item">
+						<div class="carousel-caption">
+							<h4>White Llama</h4>
+						</div><!-- close carousel-caption-->
+					</div><!-- Close item/slider 1-->
+				</div><!-- close carousel-inner -->
+				<!-- Controls -->
+				<a class="left carousel-control" data-slide="prev" href="#llamaCarousel"><span class="icon-prev"></span></a>
+				<a class="right carousel-control" data-slide="next" href="#llamaCarousel"><span class="icon-next"></span></a>
+			</div> <!-- close llama carousel div-->
+			<!--Section 2 - Carousel/slideshow - Ends -->
+
+			<!-- These view will come via angularJS route -->
+			<div ng-view></div>
+
+			<div class="row">
+				<div class="col-12">
+					<h3>More about Llama's</h3>
+						<div class="thumbnails row">
+							<div class="col-6">
+								<div class="thumbnail">
+									<img src="images/baby_lama.jpg" alt="Baby Lama">
+										<div class="caption">
+											<p class="text-justify">The baby Llama's are social animals, they are also called as cria. Llama crias or llamalettes as they are more commonly known are typically born with the whole herd gathering around (only the females are present, as the males are considered a threat) in an attempt to protect against potential predators.</p>
+											<p><a href="https://en.wikipedia.org/wiki/Cria" class="btn btn-primary btn-small" target="_blank">Click to know more</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="thumbnail">
+										<img src="images/llama_faq.jpg" alt="Llama Faq">
+										<div class="caption">
+											<p class="text-justify">Some interesting FAQ's about Llama - Llamas do not usually spit at humans. Some of us, unfortunately, have been raised in petting zoos, where we are only around humans all day. These llamas view people as other llamas and may spit at other llamas and may spit at llamas and may spit at other.......</p>
+											<p><a href="http://www.twincreeksllamas.com/faq/FAQs.htm" class="btn btn-primary btn-small" target="_blank">FAQ's</a> </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-2">
+							<h6>Copyright &copy; 2016 <br /><br />Puneet Jain</h6>
+							</div>
+
+							<div class="col-sm-4">
+								<h6>About Me</h6>
+								<p class="text-justify">This site is designed by Puneet Jain for Zappos challage. I am currently a Computer Science graduate student at California State University, Fullerton. Before joining California State University, Fullerton I worked for a product based multination company for four years and one month on various cutting edge technologies (i.e. - Java, JavaScript, CSS, AngularJS etc..).</p>
+							</div>
+
+							<div class="col-sm-2">
+								<h6>Navigation [Not Functional]</h6>
+								<ul class="unstyled">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About me</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">FAQ's</a></li>
+									<li><a href="#">Why Us</a></li>
+								</ul>
+							</div>
+
+							<div class="col-sm-3">
+								<h5>&nbsp;&nbsp;Follow Me</h5>
+								<div class="social">
+								  <a href="https://twitter.com/PunitJain1989" target="_blank"><i id="twitter" class="fa fa-twitter-square"></i></a>
+								  <a href="https://github.com/punitjain1989" target="_blank"><i id="github" class="fa fa-github-square"></i></a>
+								  <a href="https://www.facebook.com/punit.jain.7121" target="_blank"><i id="facebook" class="fa fa-facebook-square"></i></a>
+								  <a href="https://www.linkedin.com/in/puneet-jain-a5491720" target="_blank"><i id="linkedin" class="fa fa-linkedin-square"></i></a>
+								  <a href="https://plus.google.com/108139698661831458128" target="_blank"><i id="plus" class="fa fa-google-plus-square"></i></a>
+							  </div>
+						  </div>
+						</div>
+					</div>
+				</footer>
+
+		<!-- First try for the online version of jQuery-->
+		<script src="includes/js/jquery-1.8.2.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var $ = jQuery.noConflict();
+			$(document).ready(function() {
+  		$('#llamaCarousel').carousel({ interval: 2000, cycle: true });
+		});
+	</script>
+	</body>
+</html>
