@@ -17,6 +17,12 @@
 				controller  : 'contactController'
 			})
 
+			// route for the technology page
+			.when('/technology', {
+				templateUrl : 'pages/technologies.html',
+				controller  : 'technologyController'
+			})
+
 			// route for the about page
 			.when('/about', {
 				templateUrl : 'pages/about.html',
@@ -44,4 +50,7 @@
 	});
 
 	llamaApp.controller('aboutController', function($scope) {
+	});
+
+	llamaApp.controller('technologyController', function($scope) {
 	});

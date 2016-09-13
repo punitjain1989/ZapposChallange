@@ -10,6 +10,9 @@ body{
 #facts img{
   margin: 0 0 20px;
 }
+.colorindigo{
+  color: #1A237E;
+}
 .grey {
     color: grey;
 }
