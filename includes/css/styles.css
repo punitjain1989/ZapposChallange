@@ -25,6 +25,15 @@ body{
 .navbar{
   background: black;
 }
+.navbar li a{
+  color: white;
+}
+.navbar li a:hover{
+  color: #CFD8DC;
+}
+.navbar li a:active{
+  color: #CFD8DC;
+}
 #llamaCarousel .item {
   height: 600px;
 }
